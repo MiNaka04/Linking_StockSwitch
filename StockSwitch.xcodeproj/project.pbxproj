@@ -14,6 +14,8 @@
 		0F8CF7901C96849B001DDA36 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F8CF78E1C96849B001DDA36 /* LaunchScreen.storyboard */; };
 		0F8CF79B1C96849B001DDA36 /* StockSwitchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F8CF79A1C96849B001DDA36 /* StockSwitchTests.swift */; };
 		0F8CF7A61C96849B001DDA36 /* StockSwitchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F8CF7A51C96849B001DDA36 /* StockSwitchUITests.swift */; };
+		0F8CF7B61C968900001DDA36 /* LinkingLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F8CF7B31C9684FE001DDA36 /* LinkingLibrary.framework */; };
+		0F8CF7B71C968900001DDA36 /* LinkingLibrary.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0F8CF7B31C9684FE001DDA36 /* LinkingLibrary.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +35,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		0F8CF7B81C968900001DDA36 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				0F8CF7B71C968900001DDA36 /* LinkingLibrary.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		0F8CF7821C96849B001DDA36 /* StockSwitch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StockSwitch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F8CF7851C96849B001DDA36 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +63,8 @@
 		0F8CF7A11C96849B001DDA36 /* StockSwitchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StockSwitchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F8CF7A51C96849B001DDA36 /* StockSwitchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockSwitchUITests.swift; sourceTree = "<group>"; };
 		0F8CF7A71C96849B001DDA36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0F8CF7B31C9684FE001DDA36 /* LinkingLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LinkingLibrary.framework; path = StockSwitch/LinkingLibrary.framework; sourceTree = "<group>"; };
+		0F8CF7B91C968A62001DDA36 /* LinkingLib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LinkingLib.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F8CF7B61C968900001DDA36 /* LinkingLibrary.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +96,7 @@
 		0F8CF7791C96849B001DDA36 = {
 			isa = PBXGroup;
 			children = (
+				0F8CF7B31C9684FE001DDA36 /* LinkingLibrary.framework */,
 				0F8CF7841C96849B001DDA36 /* StockSwitch */,
 				0F8CF7991C96849B001DDA36 /* StockSwitchTests */,
 				0F8CF7A41C96849B001DDA36 /* StockSwitchUITests */,
@@ -103,6 +123,7 @@
 				0F8CF78C1C96849B001DDA36 /* Assets.xcassets */,
 				0F8CF78E1C96849B001DDA36 /* LaunchScreen.storyboard */,
 				0F8CF7911C96849B001DDA36 /* Info.plist */,
+				0F8CF7B91C968A62001DDA36 /* LinkingLib.h */,
 			);
 			path = StockSwitch;
 			sourceTree = "<group>";
@@ -135,6 +156,7 @@
 				0F8CF77E1C96849B001DDA36 /* Sources */,
 				0F8CF77F1C96849B001DDA36 /* Frameworks */,
 				0F8CF7801C96849B001DDA36 /* Resources */,
+				0F8CF7B81C968900001DDA36 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -332,6 +354,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -348,7 +371,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -376,6 +399,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -386,7 +410,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -397,10 +421,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/StockSwitch",
+				);
 				INFOPLIST_FILE = StockSwitch/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.StockSwitch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/$(PROJECT)/LinkingLib.h";
 			};
 			name = Debug;
 		};
@@ -408,10 +438,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/StockSwitch",
+				);
 				INFOPLIST_FILE = StockSwitch/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.StockSwitch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/$(PROJECT)/LinkingLib.h";
 			};
 			name = Release;
 		};
@@ -473,7 +509,7 @@
 				0F8CF7A91C96849B001DDA36 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		0F8CF7AA1C96849B001DDA36 /* Build configuration list for PBXNativeTarget "StockSwitch" */ = {
 			isa = XCConfigurationList;
@@ -482,6 +518,7 @@
 				0F8CF7AC1C96849B001DDA36 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
 		};
 		0F8CF7AD1C96849B001DDA36 /* Build configuration list for PBXNativeTarget "StockSwitchTests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +527,7 @@
 				0F8CF7AF1C96849B001DDA36 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
 		};
 		0F8CF7B01C96849B001DDA36 /* Build configuration list for PBXNativeTarget "StockSwitchUITests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +536,7 @@
 				0F8CF7B21C96849B001DDA36 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};
