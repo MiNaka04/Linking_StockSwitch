@@ -14,10 +14,8 @@
 		0F8CF7901C96849B001DDA36 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F8CF78E1C96849B001DDA36 /* LaunchScreen.storyboard */; };
 		0F8CF79B1C96849B001DDA36 /* StockSwitchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F8CF79A1C96849B001DDA36 /* StockSwitchTests.swift */; };
 		0F8CF7A61C96849B001DDA36 /* StockSwitchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F8CF7A51C96849B001DDA36 /* StockSwitchUITests.swift */; };
-		0F8CF7B61C968900001DDA36 /* LinkingLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F8CF7B31C9684FE001DDA36 /* LinkingLibrary.framework */; };
-		0F8CF7B71C968900001DDA36 /* LinkingLibrary.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0F8CF7B31C9684FE001DDA36 /* LinkingLibrary.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		8936B6981C99A72A00BB346C /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8936B6971C99A72A00BB346C /* MainTableViewCell.swift */; };
-		896EB86A1C99A84B00A7F1C3 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896EB8691C99A84B00A7F1C3 /* MainTableViewController.swift */; };
+		0FD3E42A1C9BDF9A0042C8B1 /* LinkingLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FD3E4291C9BDF9A0042C8B1 /* LinkingLibrary.framework */; };
+		0FD3E42B1C9BDF9A0042C8B1 /* LinkingLibrary.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0FD3E4291C9BDF9A0042C8B1 /* LinkingLibrary.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,7 +42,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				0F8CF7B71C968900001DDA36 /* LinkingLibrary.framework in Embed Frameworks */,
+				0FD3E42B1C9BDF9A0042C8B1 /* LinkingLibrary.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -65,10 +63,8 @@
 		0F8CF7A11C96849B001DDA36 /* StockSwitchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StockSwitchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F8CF7A51C96849B001DDA36 /* StockSwitchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockSwitchUITests.swift; sourceTree = "<group>"; };
 		0F8CF7A71C96849B001DDA36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0F8CF7B31C9684FE001DDA36 /* LinkingLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LinkingLibrary.framework; path = StockSwitch/LinkingLibrary.framework; sourceTree = "<group>"; };
 		0F8CF7B91C968A62001DDA36 /* LinkingLib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LinkingLib.h; sourceTree = "<group>"; };
-		8936B6971C99A72A00BB346C /* MainTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
-		896EB8691C99A84B00A7F1C3 /* MainTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
+		0FD3E4291C9BDF9A0042C8B1 /* LinkingLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LinkingLibrary.framework; path = StockSwitch/LinkingLibrary.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,7 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0F8CF7B61C968900001DDA36 /* LinkingLibrary.framework in Frameworks */,
+				0FD3E42A1C9BDF9A0042C8B1 /* LinkingLibrary.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,7 +96,7 @@
 		0F8CF7791C96849B001DDA36 = {
 			isa = PBXGroup;
 			children = (
-				0F8CF7B31C9684FE001DDA36 /* LinkingLibrary.framework */,
+				0FD3E4291C9BDF9A0042C8B1 /* LinkingLibrary.framework */,
 				0F8CF7841C96849B001DDA36 /* StockSwitch */,
 				0F8CF7991C96849B001DDA36 /* StockSwitchTests */,
 				0F8CF7A41C96849B001DDA36 /* StockSwitchUITests */,
@@ -122,8 +118,6 @@
 			isa = PBXGroup;
 			children = (
 				0F8CF7851C96849B001DDA36 /* AppDelegate.swift */,
-				8936B6971C99A72A00BB346C /* MainTableViewCell.swift */,
-				896EB8691C99A84B00A7F1C3 /* MainTableViewController.swift */,
 				0F8CF7871C96849B001DDA36 /* ViewController.swift */,
 				0F8CF7891C96849B001DDA36 /* Main.storyboard */,
 				0F8CF78C1C96849B001DDA36 /* Assets.xcassets */,
@@ -284,9 +278,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				896EB86A1C99A84B00A7F1C3 /* MainTableViewController.swift in Sources */,
 				0F8CF7881C96849B001DDA36 /* ViewController.swift in Sources */,
-				8936B6981C99A72A00BB346C /* MainTableViewCell.swift in Sources */,
 				0F8CF7861C96849B001DDA36 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -429,16 +421,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/StockSwitch",
 				);
 				INFOPLIST_FILE = StockSwitch/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.StockSwitch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/$(PROJECT)/LinkingLib.h";
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = /Users/mizuho/Desktop/StockSwitch_Nakashima/StockSwitch/LinkingLib.h;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -446,16 +441,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/StockSwitch",
 				);
 				INFOPLIST_FILE = StockSwitch/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.StockSwitch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/$(PROJECT)/LinkingLib.h";
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = /Users/mizuho/Desktop/StockSwitch_Nakashima/StockSwitch/LinkingLib.h;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
