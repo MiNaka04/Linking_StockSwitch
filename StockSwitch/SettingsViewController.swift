@@ -27,7 +27,20 @@ class SettingsViewController: UIViewController {
     }
     
     @IBAction func setButtonClicked(sender: UIButton) {
-    
+        let alertDate : Int? = Int(textBoxAlertDate.text!)
+        if (alertDate != nil){
+            SettingsData.alertDate = (alertDate)!
+        }
+
+        let expiryDate : Int? = Int(textBoxExpiryDate.text!)
+        if (expiryDate != nil){
+            SettingsData.expiryDate = (expiryDate)!
+        }
+        
+        let fallPercentage : Int? = Int(textBoxFallPercentage.text!)
+        if (fallPercentage != nil){
+            SettingsData.fallPercentage = (fallPercentage)!
+        }
     }
     
 }
