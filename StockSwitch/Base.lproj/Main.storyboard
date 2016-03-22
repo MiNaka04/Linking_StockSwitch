@@ -156,6 +156,9 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Azm-Da-fO2">
                                 <rect key="frame" x="257" y="349" width="30" height="30"/>
                                 <state key="normal" title="Set"/>
+                                <connections>
+                                    <action selector="setButtonClicked:" destination="uEX-F0-5Ho" eventType="touchUpInside" id="Oaz-XV-17y"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="%減" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dVM-cd-lyZ">
                                 <rect key="frame" x="299" y="268" width="30" height="21"/>
@@ -166,6 +169,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="textBoxAlertDate" destination="zIt-jY-KhK" id="WU6-BU-3Oo"/>
+                        <outlet property="textBoxExpiryDate" destination="Mgm-93-PDD" id="fTZ-ls-tRH"/>
+                        <outlet property="textBoxFallPercentage" destination="zxQ-14-iHQ" id="3hw-fh-ue8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0tE-73-ell" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
