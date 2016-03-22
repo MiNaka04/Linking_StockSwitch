@@ -16,7 +16,9 @@ class SettingsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        textBoxAlertDate.text = String(SettingsData.alertDate)
+        textBoxExpiryDate.text = String(SettingsData.expiryDate)
+        textBoxFallPercentage.text = String(SettingsData.fallPercentage)
     }
     
     override func didReceiveMemoryWarning() {
