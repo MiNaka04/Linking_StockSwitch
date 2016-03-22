@@ -84,7 +84,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="QSc-cR-KXp">
-                        <barButtonItem key="leftBarButtonItem" title="menu" id="NLb-Sg-NcO"/>
+                        <barButtonItem key="leftBarButtonItem" title="menu" id="NLb-Sg-NcO">
+                            <connections>
+                                <segue destination="uEX-F0-5Ho" kind="show" id="b4T-Xw-gRl"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="edit" id="yTk-m5-4Ih"/>
                     </navigationItem>
                 </tableViewController>
@@ -101,7 +105,7 @@
                         <viewControllerLayoutGuide type="bottom" id="n1H-xB-uz0"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="bzu-ZO-UAG">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
