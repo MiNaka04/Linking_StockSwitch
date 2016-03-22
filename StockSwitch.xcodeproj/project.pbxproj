@@ -17,6 +17,7 @@
 		0F8CF7B61C968900001DDA36 /* LinkingLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F8CF7B31C9684FE001DDA36 /* LinkingLibrary.framework */; };
 		0F8CF7B71C968900001DDA36 /* LinkingLibrary.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0F8CF7B31C9684FE001DDA36 /* LinkingLibrary.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		504E96251CA17087006E818F /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504E96241CA17087006E818F /* SettingsViewController.swift */; };
+		504E96291CA2044D006E818F /* SettingsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504E96281CA2044D006E818F /* SettingsData.swift */; };
 		8936B6981C99A72A00BB346C /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8936B6971C99A72A00BB346C /* MainTableViewCell.swift */; };
 		896EB86A1C99A84B00A7F1C3 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896EB8691C99A84B00A7F1C3 /* MainTableViewController.swift */; };
 /* End PBXBuildFile section */
@@ -69,6 +70,7 @@
 		0F8CF7B31C9684FE001DDA36 /* LinkingLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LinkingLibrary.framework; path = StockSwitch/LinkingLibrary.framework; sourceTree = "<group>"; };
 		0F8CF7B91C968A62001DDA36 /* LinkingLib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LinkingLib.h; sourceTree = "<group>"; };
 		504E96241CA17087006E818F /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		504E96281CA2044D006E818F /* SettingsData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsData.swift; sourceTree = "<group>"; };
 		8936B6971C99A72A00BB346C /* MainTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
 		896EB8691C99A84B00A7F1C3 /* MainTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -133,6 +135,7 @@
 				0F8CF78E1C96849B001DDA36 /* LaunchScreen.storyboard */,
 				0F8CF7911C96849B001DDA36 /* Info.plist */,
 				0F8CF7B91C968A62001DDA36 /* LinkingLib.h */,
+				504E96281CA2044D006E818F /* SettingsData.swift */,
 			);
 			path = StockSwitch;
 			sourceTree = "<group>";
@@ -289,6 +292,7 @@
 			files = (
 				504E96251CA17087006E818F /* SettingsViewController.swift in Sources */,
 				896EB86A1C99A84B00A7F1C3 /* MainTableViewController.swift in Sources */,
+				504E96291CA2044D006E818F /* SettingsData.swift in Sources */,
 				0F8CF7881C96849B001DDA36 /* ViewController.swift in Sources */,
 				8936B6981C99A72A00BB346C /* MainTableViewCell.swift in Sources */,
 				0F8CF7861C96849B001DDA36 /* AppDelegate.swift in Sources */,
