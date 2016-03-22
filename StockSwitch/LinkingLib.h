@@ -9,7 +9,7 @@
 #ifndef LinkingLib_h
 #define LinkingLib_h
 
-
+#import <UIKit/UIKit.h>
 #import <LinkingLibrary/LinkingLibrary.h>
 
 
