@@ -14,7 +14,7 @@ class MainTableViewController: UITableViewController {
     let expiryDate = SettingsData.expiryDate // 何日後を消費期限とするか？
     var fallPercentage = SettingsData.fallPercentage // 一回押すごとに何%消費するか？
 
-    let items = [("03/10", "ホウレンソウ", 50)
+    var items = [("03/10", "ホウレンソウ", 50)
         , ("03/15", "ホウレンソウ", 90)
         , ("03/20", "りんご", 10)
     ]
