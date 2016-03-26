@@ -10,15 +10,17 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, BLEConnecterDelegate{
     
-    var items: [(String,String,Int)]  = []
+//    var items: [(String,String,Int)]  = []
     var BLEDeviceName = "Linking Board32935"
 //    var BLEDeviceName = "Linking 6x31 00005"
-/*
-   var items = [("03/10", "ホウレンソウ", 50)
-        , ("03/15", "ホウレンソウ", 90)
-        , ("03/20", "りんご", 10)
+
+   var items = [("03/10", "マヨネーズ", 50)
+        , ("03/15", "トウモロコシ", 30)
+        , ("03/24", "ビール", 40)
+    , ("03/20", "レタス", 100)
+    , ("03/22", "人参", 70)
     ]
-*/
+
     @IBOutlet weak var tableView: UITableView!
     
     //SettingsViewControllerの有効化
@@ -48,6 +50,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     var resEmptyDate: NSDate?
     var bEmpty: Bool = false
     var bStock: Bool = false
+    var nowIndex:Int = 0
     
     var delegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
 
@@ -208,8 +211,15 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         // Cellに値を設定.
         if(!items.isEmpty){
             let item = items[indexPath.row]
+            nowIndex = indexPath.row
             if(item.2 == 0){
-                cell!.backgroundColor = UIColor(red: 255/255.0, green: 153/255.0, blue: 153/255.0, alpha: 1.0);
+                cell!.backgroundColor = UIColor(red: 255/255.0, green: 99/255.0, blue: 71/255.0, alpha: 1.0);
+            }else if(item.2<=30){
+                cell!.backgroundColor = UIColor(red: 255/255.0, green: 140/255.0, blue: 0/255.0, alpha: 1.0);
+            }else if(item.2<=50){
+                cell!.backgroundColor = UIColor(red: 255/255.0, green: 215/255.0, blue: 0/255.0, alpha: 1.0);
+            }else if(item.2<=80){
+                cell!.backgroundColor = UIColor(red: 152/255.0, green: 251/255.0, blue: 152/255.0, alpha: 1.0);
             }else{
                 cell!.backgroundColor = UIColor.whiteColor();
             }
@@ -347,18 +357,18 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         if(time_cnt >= 200){
             switch sw_cnt{
                 case 2:
-                    items[0].2 += SettingsData.fallPercentage
+                    items[nowIndex].2 += SettingsData.fallPercentage
                 break
                 case 3:
-                    items[0].2 = 0
+                    items[nowIndex].2 = 0
                 break
                 case 4:
-                    items[0].2 = 100
+                    items[nowIndex].2 = 100
                 break
                 default:
-                    items[0].2 -= SettingsData.fallPercentage
-                    if(items[0].2<=0){
-                        items[0].2 = 0
+                    items[nowIndex].2 -= SettingsData.fallPercentage
+                    if(items[nowIndex].2<=0){
+                        items[nowIndex].2 = 0
                     }
                 break
             }
@@ -366,7 +376,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             bSetCount = false
             sw_cnt = 0
             
-            if(items[0].2 == 0){
+            if(items[nowIndex].2 == 0){
                 LED_LightUp()
                 ZeroDate = NSDate()                 //0になった日付を取得
                 DateAlertEmptySetting()
@@ -401,7 +411,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let time_cnt = Int(Time*100)
         
         //1回目のボタンを押してから2秒間で判定
-        if(time_cnt >= 180){
+        if(time_cnt >= 480){
             LEDChengeStatus(false)
             led_timer.invalidate()
         }
@@ -479,6 +489,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func DateAlertStockSetting(){
         let StockInterval: NSTimeInterval = NSTimeInterval(SettingsData.alertDate)*24*60*60
         resStockDate = NSDate(timeInterval: StockInterval, sinceDate: StockDate!)
+        
         bEmpty = true
     }
     func DateAlertEmptySetting(){
