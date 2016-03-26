@@ -12,7 +12,6 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
     var blename:String?
     var blebat:String?
     
@@ -83,10 +82,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     //通知処理
     func addStockLocalNotification(){
         
+        let itemIndex = ViewController().nowIndex
         var notification = UILocalNotification()
         notification.fireDate = ViewController().resStockDate
         notification.timeZone = NSTimeZone.defaultTimeZone()
-        let Text :String = String(ViewController().items[0].1) + "は保存して" + String(SettingsData.alertDate) + "日経過しています"
+        let Text :String = String(ViewController().items[itemIndex].1) + "は保存して" + String(SettingsData.alertDate) + "日経過しています"
         notification.alertBody = Text
         notification.alertAction = "OK"
         notification.soundName = UILocalNotificationDefaultSoundName
@@ -95,11 +95,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func addEmptyLocalNotification(){
-        
+        let itemIndex = ViewController().nowIndex
         var notification = UILocalNotification()
         notification.fireDate = ViewController().ZeroDate
         notification.timeZone = NSTimeZone.defaultTimeZone()
-        let Text :String = String(ViewController().items[0].1) + "は保存して" + String(SettingsData.expiryDate) + "日経過しています"
+        let Text :String = String(ViewController().items[itemIndex].1) + "は保存して" + String(SettingsData.expiryDate) + "日経過しています"
         notification.alertBody = Text
         notification.alertAction = "OK"
         notification.soundName = UILocalNotificationDefaultSoundName
